@@ -19,8 +19,9 @@ import (
 	"os/exec"
 
 	"github.com/hashicorp/go-multierror"
-	"github.com/mudler/yip/pkg/logger"
 	"github.com/sirupsen/logrus"
+
+	"github.com/rancher/yip/pkg/logger"
 )
 
 type StandardConsole struct {

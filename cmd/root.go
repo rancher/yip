@@ -1,3 +1,7 @@
+go: errors parsing go.mod:
+go.mod:26: malformed module path "<<<<<<<": invalid char '<'
+go.mod:28: usage: require module/path v1.2.3
+go.mod:30: usage: require module/path v1.2.3
 //   Copyright 2020 Ettore Di Giacinto <mudler@mocaccino.org>
 //
 //   Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,13 +24,14 @@ import (
 	"os"
 	"strings"
 
-	"github.com/mudler/yip/pkg/console"
-	"github.com/mudler/yip/pkg/executor"
-	"github.com/mudler/yip/pkg/logger"
-	"github.com/mudler/yip/pkg/schema"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"github.com/twpayne/go-vfs/v4"
+
+	"github.com/rancher/yip/pkg/console"
+	"github.com/rancher/yip/pkg/executor"
+	"github.com/rancher/yip/pkg/logger"
+	"github.com/rancher/yip/pkg/schema"
 )
 
 // Build time and commit information.

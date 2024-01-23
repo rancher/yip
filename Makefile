@@ -9,8 +9,8 @@ BUILD_PLATFORMS ?= -osarch="linux/amd64" -osarch="linux/386" -osarch="linux/arm"
 ROOT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 # go tool nm ./yip | grep Commit
-override LDFLAGS += -X "github.com/mudler/yip/cmd.BuildTime=$(shell date -u '+%Y-%m-%d %I:%M:%S %Z')"
-override LDFLAGS += -X "github.com/mudler/yip/cmd.BuildCommit=$(shell git rev-parse HEAD)"
+override LDFLAGS += -X "github.com/rancher/yip/cmd.BuildTime=$(shell date -u '+%Y-%m-%d %I:%M:%S %Z')"
+override LDFLAGS += -X "github.com/rancher/yip/cmd.BuildCommit=$(shell git rev-parse HEAD)"
 
 .PHONY: all
 all: build

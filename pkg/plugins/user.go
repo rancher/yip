@@ -12,10 +12,11 @@ import (
 	"github.com/hashicorp/go-multierror"
 	"github.com/joho/godotenv"
 	entities "github.com/mudler/entities/pkg/entities"
-	"github.com/mudler/yip/pkg/logger"
-	"github.com/mudler/yip/pkg/schema"
 	"github.com/twpayne/go-vfs/v4"
 	passwd "github.com/willdonnelly/passwd"
+
+	"github.com/rancher/yip/pkg/logger"
+	"github.com/rancher/yip/pkg/schema"
 )
 
 func createUser(fs vfs.FS, u schema.User, console Console) error {

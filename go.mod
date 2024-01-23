@@ -1,11 +1,11 @@
-module github.com/mudler/yip
+module github.com/rancher/yip
 
-go 1.18
+go 1.20
 
 require (
 	github.com/Masterminds/sprig/v3 v3.2.3
 	github.com/apex/log v1.9.0
-	github.com/cavaliergopher/grab v2.0.0+incompatible
+	github.com/cavaliergopher/grab/v3 v3.0.1
 	github.com/denisbrodbeck/machineid v1.0.1
 	github.com/go-git/go-git/v5 v5.4.2
 	github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510
@@ -19,15 +19,14 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/rancher-sandbox/linuxkit v1.0.2
 	github.com/sanity-io/litter v1.5.5
-	github.com/satori/go.uuid v1.2.1-0.20181028125025-b2ce2384e17b
+	github.com/satori/go.uuid v1.2.0
 	github.com/sirupsen/logrus v1.9.3
 	github.com/spectrocloud-labs/herd v0.4.2
-	github.com/spf13/cobra v1.7.0
 	github.com/twpayne/go-vfs/v4 v4.3.0
 	github.com/willdonnelly/passwd v0.0.0-20141013001024-7935dab3074c
 	github.com/zcalusic/sysinfo v0.9.5
 	golang.org/x/crypto v0.12.0
-	gopkg.in/ini.v1 v1.67.0
+	gopkg.in/ini.v1 v1.62.0
 	gopkg.in/yaml.v1 v1.0.0-20140924161607-9f9df34309c0
 	gopkg.in/yaml.v2 v2.4.0
 	pault.ag/go/modprobe v0.1.2
@@ -51,7 +50,6 @@ require (
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/huandu/xstrings v1.3.3 // indirect
 	github.com/imdario/mergo v0.3.13 // indirect
-	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/itchyny/timefmt-go v0.1.5 // indirect
 	github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 // indirect
 	github.com/kendru/darwin/go/depgraph v0.0.0-20221105232959-877d6a81060c // indirect
@@ -59,8 +57,7 @@ require (
 	github.com/mitchellh/copystructure v1.2.0 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/mitchellh/reflectwalk v1.0.2 // indirect
-	github.com/onsi/ginkgo v1.16.5 // indirect
-	github.com/packethost/packngo v0.29.0 // indirect
+	github.com/packethost/packngo v0.1.0 // indirect
 	github.com/phayes/permbits v0.0.0-20190612203442-39d7c581d2ee // indirect
 	github.com/pierrec/lz4 v2.6.1+incompatible // indirect
 	github.com/pkg/xattr v0.4.9 // indirect
@@ -68,11 +65,10 @@ require (
 	github.com/sergi/go-diff v1.2.0 // indirect
 	github.com/shopspring/decimal v1.3.1 // indirect
 	github.com/spf13/cast v1.5.0 // indirect
-	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/tredoe/osutil/v2 v2.0.0-rc.16 // indirect
 	github.com/ulikunitz/xz v0.5.11 // indirect
-	github.com/vishvananda/netlink v1.1.0 // indirect
-	github.com/vishvananda/netns v0.0.4 // indirect
+	github.com/vishvananda/netlink v0.0.0-20170808154308-f5a6f697a596 // indirect
+	github.com/vishvananda/netns v0.0.0-20170707011535-86bef332bfc3 // indirect
 	github.com/vmware/vmw-guestinfo v0.0.0-20220317130741-510905f0efa3 // indirect
 	github.com/xanzy/ssh-agent v0.3.1 // indirect
 	golang.org/x/exp v0.0.0-20220303212507-bbda1eaf7a17 // indirect
@@ -83,5 +79,5 @@ require (
 	gopkg.in/djherbis/times.v1 v1.3.0 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	pault.ag/go/topsort v0.1.1 // indirect
+	pault.ag/go/topsort v0.0.0-20160530003732-f98d2ad46e1a // indirect
 )

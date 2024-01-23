@@ -22,12 +22,13 @@ import (
 	"path/filepath"
 
 	"github.com/hashicorp/go-multierror"
-	"github.com/mudler/yip/pkg/logger"
-	"github.com/mudler/yip/pkg/plugins"
-	"github.com/mudler/yip/pkg/schema"
-	"github.com/mudler/yip/pkg/utils"
 	"github.com/spectrocloud-labs/herd"
 	"github.com/twpayne/go-vfs/v4"
+
+	"github.com/rancher/yip/pkg/logger"
+	"github.com/rancher/yip/pkg/plugins"
+	"github.com/rancher/yip/pkg/schema"
+	"github.com/rancher/yip/pkg/utils"
 )
 
 // DefaultExecutor is the default yip Executor.

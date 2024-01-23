@@ -16,11 +16,12 @@ package plugins_test
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 
-	. "github.com/mudler/yip/pkg/plugins"
-	"github.com/mudler/yip/pkg/utils"
 	"github.com/twpayne/go-vfs/v4/vfst"
+
+	. "github.com/rancher/yip/pkg/plugins"
+	"github.com/rancher/yip/pkg/utils"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
@@ -45,14 +46,14 @@ var _ = Describe("Hostname", func() {
 			file, err := fs.Open("/etc/hostname")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			Expect(err).ShouldNot(HaveOccurred())
 			Expect(string(b)).Should(Equal(fmt.Sprintf("%s\n", ts)))
 
 			file, err = fs.Open("/etc/hosts")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err = ioutil.ReadAll(file)
+			b, err = io.ReadAll(file)
 			Expect(err).ShouldNot(HaveOccurred())
 			Expect(string(b)).Should(Equal(fmt.Sprintf("127.0.0.1 localhost %s\n", ts)))
 		})

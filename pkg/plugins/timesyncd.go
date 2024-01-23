@@ -3,10 +3,11 @@ package plugins
 import (
 	"os"
 
-	"github.com/mudler/yip/pkg/logger"
-	"github.com/mudler/yip/pkg/schema"
 	"github.com/twpayne/go-vfs/v4"
 	"gopkg.in/ini.v1"
+
+	"github.com/rancher/yip/pkg/logger"
+	"github.com/rancher/yip/pkg/schema"
 )
 
 const timeSyncd = "/etc/systemd/timesyncd.conf"

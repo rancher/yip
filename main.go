@@ -14,7 +14,7 @@
 
 package main
 
-import "github.com/mudler/yip/cmd"
+import "github.com/rancher/yip/cmd"
 
 func main() {
 	cmd.Execute()

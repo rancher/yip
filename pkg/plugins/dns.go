@@ -4,8 +4,8 @@ import (
 	"github.com/moby/moby/libnetwork/resolvconf"
 	"github.com/twpayne/go-vfs/v4"
 
-	"github.com/mudler/yip/pkg/logger"
-	"github.com/mudler/yip/pkg/schema"
+	"github.com/rancher/yip/pkg/logger"
+	"github.com/rancher/yip/pkg/schema"
 )
 
 func DNS(l logger.Interface, s schema.Stage, fs vfs.FS, console Console) error {
