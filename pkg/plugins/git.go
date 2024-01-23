@@ -22,12 +22,13 @@ import (
 	"github.com/go-git/go-git/v5/plumbing/transport"
 	gith "github.com/go-git/go-git/v5/plumbing/transport/http"
 	ssh2 "github.com/go-git/go-git/v5/plumbing/transport/ssh"
-	"github.com/mudler/yip/pkg/logger"
-	"github.com/mudler/yip/pkg/schema"
-	"github.com/mudler/yip/pkg/utils"
 	"github.com/pkg/errors"
 	"github.com/twpayne/go-vfs/v4"
 	"golang.org/x/crypto/ssh"
+
+	"github.com/rancher/yip/pkg/logger"
+	"github.com/rancher/yip/pkg/schema"
+	"github.com/rancher/yip/pkg/utils"
 )
 
 func Git(l logger.Interface, s schema.Stage, fs vfs.FS, console Console) error {

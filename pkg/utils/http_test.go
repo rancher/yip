@@ -15,7 +15,7 @@
 package utils_test
 
 import (
-	. "github.com/mudler/yip/pkg/utils"
+	. "github.com/rancher/yip/pkg/utils"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

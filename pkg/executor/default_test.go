@@ -17,22 +17,21 @@ package executor_test
 import (
 	"bytes"
 	"fmt"
-	"github.com/sanity-io/litter"
-	"github.com/twpayne/go-vfs/v4"
 	"io"
-	"io/ioutil"
 	"log"
 	"os"
 	"path/filepath"
 
-	"github.com/mudler/yip/pkg/console"
+	"github.com/sanity-io/litter"
 	"github.com/sirupsen/logrus"
-
-	. "github.com/mudler/yip/pkg/executor"
-	"github.com/mudler/yip/pkg/schema"
-	consoletests "github.com/mudler/yip/tests/console"
+	"github.com/twpayne/go-vfs/v4"
 	"github.com/twpayne/go-vfs/v4/vfst"
 	"github.com/zcalusic/sysinfo"
+
+	"github.com/rancher/yip/pkg/console"
+	. "github.com/rancher/yip/pkg/executor"
+	"github.com/rancher/yip/pkg/schema"
+	consoletests "github.com/rancher/yip/tests/console"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
@@ -62,7 +61,7 @@ var _ = Describe("Executor", func() {
 			file, err := fs.Open("/tmp/test/foo")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			Expect(err).ShouldNot(HaveOccurred())
 
 			var si sysinfo.SysInfo
@@ -89,7 +88,7 @@ var _ = Describe("Executor", func() {
 			file, err := fs.Open("/tmp/test/foo")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -151,7 +150,7 @@ var _ = Describe("Executor", func() {
 			file, err := os.Open(temp + "/foo")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -199,7 +198,7 @@ stages:
 			file, err := os.Open(temp + "/tmp/test/bar")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -251,7 +250,7 @@ stages:
 			file, err := os.Open(temp + "/tmp/test/bar")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -293,7 +292,7 @@ stages:
 			file, err := os.Open(temp + "/tmp/test/bar")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -340,7 +339,7 @@ stages:
 			file, err := os.Open(temp + "/tmp/test/bar")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -376,7 +375,7 @@ users: "one,two,tree"
 			file, err := os.Open(temp + "/foo")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -411,7 +410,7 @@ users: "one,two,tree"
 			file, err := os.Open(temp + "/foo")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -465,7 +464,7 @@ stages:
 			file, err := os.Open(temp + "/tmp/test/baz")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -527,7 +526,7 @@ stages:
 			file, err := os.Open(temp + "/tmp/test/bar")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -624,7 +623,7 @@ stages:
 			file, err := os.Open(temp + "/tmp/test/bar")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}

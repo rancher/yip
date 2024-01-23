@@ -5,11 +5,12 @@ import (
 	"path/filepath"
 
 	"github.com/hashicorp/go-multierror"
-	"github.com/mudler/yip/pkg/logger"
-	"github.com/mudler/yip/pkg/schema"
-	"github.com/mudler/yip/pkg/utils"
 	"github.com/pkg/errors"
 	"github.com/twpayne/go-vfs/v4"
+
+	"github.com/rancher/yip/pkg/logger"
+	"github.com/rancher/yip/pkg/schema"
+	"github.com/rancher/yip/pkg/utils"
 )
 
 func EnsureFiles(l logger.Interface, s schema.Stage, fs vfs.FS, console Console) error {
