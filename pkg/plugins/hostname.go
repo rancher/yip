@@ -3,10 +3,8 @@ package plugins
 import (
 	"bufio"
 	"fmt"
-	"math/rand"
 	"strings"
 	"syscall"
-	"time"
 
 	"github.com/denisbrodbeck/machineid"
 	"github.com/hashicorp/go-multierror"
@@ -27,15 +25,8 @@ func Hostname(l logger.Interface, s schema.Stage, fs vfs.FS, console Console) er
 		return nil
 	}
 
-	// Template the input string with random generated strings and UUID.
-	// Those can be used to e.g. generate random node names based on patterns "foo-{{.UUID}}"
-	rand.Seed(time.Now().UnixNano())
-
 	id, _ := machineid.ID()
-	myuuid, err := uuid.NewV4()
-	if err != nil {
-		return err
-	}
+	myuuid := uuid.NewV4()
 	tmpl, err := utils.TemplatedString(hostname,
 		struct {
 			UUID      string
