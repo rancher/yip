@@ -16,7 +16,6 @@ package plugins_test
 
 import (
 	"io"
-	"io/ioutil"
 
 	"github.com/sirupsen/logrus"
 	"github.com/twpayne/go-vfs/v4/vfst"
@@ -48,9 +47,9 @@ var _ = Describe("Timesyncd", func() {
 			file, err := fs.Open("/etc/systemd/timesyncd.conf")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			Expect(err).ShouldNot(HaveOccurred())
-			Expect(string(b)).Should(Equal("[Time]\nNTP = 0.pool\n"))
+			Expect(string(b)).Should(Equal("[Time]\nNTP = 0.pool\n\n"))
 		})
 	})
 })
