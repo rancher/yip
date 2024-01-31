@@ -63,7 +63,7 @@ require (
 	github.com/kevinburke/ssh_config v1.2.0 // indirect
 	github.com/mitchellh/copystructure v1.2.0 // indirect
 	github.com/mitchellh/reflectwalk v1.0.2 // indirect
-	github.com/packethost/packngo v0.1.0 // indirect
+	github.com/packethost/packngo v0.31.0 // indirect
 	github.com/phayes/permbits v0.0.0-20190612203442-39d7c581d2ee // indirect
 	github.com/pierrec/lz4 v2.6.1+incompatible // indirect
 	github.com/pjbgf/sha1cd v0.3.0 // indirect
