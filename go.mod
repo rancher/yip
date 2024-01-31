@@ -12,7 +12,7 @@ require (
 	github.com/hashicorp/go-multierror v1.1.1
 	github.com/itchyny/gojq v0.12.12
 	github.com/joho/godotenv v1.5.1
-	github.com/moby/moby v23.0.2+incompatible
+	github.com/moby/moby v25.0.1+incompatible
 	github.com/mudler/entities v0.0.0-20220905203055-68348bae0f49
 	github.com/onsi/ginkgo/v2 v2.15.0
 	github.com/onsi/gomega v1.30.0
@@ -40,6 +40,7 @@ require (
 	github.com/Microsoft/go-winio v0.6.1 // indirect
 	github.com/ProtonMail/go-crypto v0.0.0-20230828082145-3c4c8a2d2371 // indirect
 	github.com/cloudflare/circl v1.3.7 // indirect
+	github.com/containerd/log v0.1.0 // indirect
 	github.com/cyphar/filepath-securejoin v0.2.4 // indirect
 	github.com/diskfs/go-diskfs v1.3.0 // indirect
 	github.com/emirpasic/gods v1.18.1 // indirect
