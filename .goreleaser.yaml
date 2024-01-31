@@ -13,9 +13,9 @@ builds:
       - CGO_ENABLED=0
     ldflags:
       - -s -w
-      - -X "github.com/mudler/yip/cmd.CLIVersion={{ .Tag }}"
-      - -X "github.com/mudler/yip/cmd.BuildTime={{ time "2006-01-02 15:04:05 MST" }}"
-      - -X "github.com/mudler/yip/cmd.BuildCommit={{ .FullCommit }}"
+      - -X "github.com/rancher/yip/cmd.CLIVersion={{ .Tag }}"
+      - -X "github.com/rancher/yip/cmd.BuildTime={{ time "2006-01-02 15:04:05 MST" }}"
+      - -X "github.com/rancher/yip/cmd.BuildCommit={{ .FullCommit }}"
     goos:
       - linux
     goarch:
