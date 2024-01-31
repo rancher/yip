@@ -97,7 +97,8 @@ users:
   passwd: "foo"
   uid: "1002"
   lock_passwd: true
-  groups: "users"
+  groups:
+  - users
   ssh_authorized_keys:
   - faaapploo
 ssh_authorized_keys:
