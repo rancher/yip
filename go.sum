@@ -184,8 +184,8 @@ github.com/mitchellh/mapstructure v1.1.2/go.mod h1:FVVH3fgwuzCH5S8UJGiWEs2h04kUh
 github.com/mitchellh/reflectwalk v1.0.0/go.mod h1:mSTlrgnPZtwu0c4WaC2kGObEpuNDbx0jmZXqmk4esnw=
 github.com/mitchellh/reflectwalk v1.0.2 h1:G2LzWKi524PWgd3mLHV8Y5k7s6XUvT0Gef6zxSIeXaQ=
 github.com/mitchellh/reflectwalk v1.0.2/go.mod h1:mSTlrgnPZtwu0c4WaC2kGObEpuNDbx0jmZXqmk4esnw=
-github.com/moby/moby v25.0.1+incompatible h1:D5dq6pwxT7Z9KiwPlH6QB6pyR6JTfJCVlgjEmyLE5uI=
-github.com/moby/moby v25.0.1+incompatible/go.mod h1:fDXVQ6+S340veQPv35CzDahGBmHsiclFwfEygB/TWMc=
+github.com/moby/moby v25.0.2+incompatible h1:g2oKRI7vgWkiPHZbBghaPbcV/SuKP1g/YLx0I2nxFT4=
+github.com/moby/moby v25.0.2+incompatible/go.mod h1:fDXVQ6+S340veQPv35CzDahGBmHsiclFwfEygB/TWMc=
 github.com/modocache/gover v0.0.0-20171022184752-b58185e213c5/go.mod h1:caMODM3PzxT8aQXRPkAt8xlV/e7d7w8GM5g0fa5F0D8=
 github.com/mudler/entities v0.0.0-20220905203055-68348bae0f49 h1:P1QgHLh0hX935j6m9K6rlSxc0mkD1UuIAOQEu+1VCW4=
 github.com/mudler/entities v0.0.0-20220905203055-68348bae0f49/go.mod h1:qquFT9tYp+/NO7tTotto4BT9zSRYSMDxo2PGZwujpFA=
