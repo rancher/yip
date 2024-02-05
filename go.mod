@@ -22,7 +22,7 @@ require (
 	github.com/satori/go.uuid v1.2.0
 	github.com/sirupsen/logrus v1.9.3
 	github.com/spectrocloud-labs/herd v0.4.2
-	github.com/spf13/cobra v0.0.6
+	github.com/spf13/cobra v1.8.0
 	github.com/twpayne/go-vfs/v4 v4.3.0
 	github.com/willdonnelly/passwd v0.0.0-20141013001024-7935dab3074c
 	github.com/zcalusic/sysinfo v0.9.5
@@ -55,7 +55,7 @@ require (
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/huandu/xstrings v1.4.0 // indirect
 	github.com/imdario/mergo v0.3.13 // indirect
-	github.com/inconshreveable/mousetrap v1.0.0 // indirect
+	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/itchyny/timefmt-go v0.1.5 // indirect
 	github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 // indirect
 	github.com/kendru/darwin/go/depgraph v0.0.0-20221105232959-877d6a81060c // indirect
