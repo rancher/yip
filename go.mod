@@ -89,5 +89,5 @@ require (
 	gopkg.in/djherbis/times.v1 v1.3.0 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
-	pault.ag/go/topsort v0.0.0-20160530003732-f98d2ad46e1a // indirect
+	pault.ag/go/topsort v0.1.1 // indirect
 )
