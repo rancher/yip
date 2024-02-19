@@ -27,7 +27,7 @@ require (
 	github.com/willdonnelly/passwd v0.0.0-20141013001024-7935dab3074c
 	github.com/zcalusic/sysinfo v1.0.2
 	golang.org/x/crypto v0.19.0
-	gopkg.in/ini.v1 v1.62.0
+	gopkg.in/ini.v1 v1.67.0
 	gopkg.in/yaml.v3 v3.0.1
 	pault.ag/go/modprobe v0.1.2
 )
