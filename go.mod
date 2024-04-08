@@ -10,7 +10,7 @@ require (
 	github.com/go-git/go-git/v5 v5.12.0
 	github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510
 	github.com/hashicorp/go-multierror v1.1.1
-	github.com/itchyny/gojq v0.12.14
+	github.com/itchyny/gojq v0.12.15
 	github.com/joho/godotenv v1.5.1
 	github.com/moby/moby v25.0.4+incompatible
 	github.com/mudler/entities v0.0.0-20220905203055-68348bae0f49
