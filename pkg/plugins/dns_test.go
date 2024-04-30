@@ -15,7 +15,7 @@
 package plugins_test
 
 import (
-	"io/ioutil"
+	"io"
 	"os"
 
 	"github.com/sirupsen/logrus"
@@ -48,7 +48,7 @@ var _ = Describe("Dns", func() {
 			file, err := os.Open(temp + "/foo")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			Expect(err).ShouldNot(HaveOccurred())
 
 			Expect(string(b)).Should(Equal("nameserver 8.8.8.8\n"))
