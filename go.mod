@@ -16,7 +16,6 @@ require (
 	github.com/mudler/entities v0.0.0-20220905203055-68348bae0f49
 	github.com/onsi/ginkgo/v2 v2.17.2
 	github.com/onsi/gomega v1.33.0
-	github.com/pkg/errors v0.9.1
 	github.com/rancher-sandbox/linuxkit v1.0.2
 	github.com/sanity-io/litter v1.5.5
 	github.com/satori/go.uuid v1.2.0
@@ -63,6 +62,7 @@ require (
 	github.com/phayes/permbits v0.0.0-20190612203442-39d7c581d2ee // indirect
 	github.com/pierrec/lz4/v4 v4.1.21 // indirect
 	github.com/pjbgf/sha1cd v0.3.0 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pkg/xattr v0.4.9 // indirect
 	github.com/sergi/go-diff v1.3.2-0.20230802210424-5b0b94c5c0d3 // indirect
 	github.com/shopspring/decimal v1.4.0 // indirect

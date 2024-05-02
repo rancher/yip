@@ -10,7 +10,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pkg/errors"
 	"github.com/zcalusic/sysinfo"
 
 	"github.com/rancher/yip/pkg/logger"
@@ -65,7 +64,7 @@ func download(url string) (string, error) {
 		time.Sleep(time.Second)
 	}
 	if err != nil {
-		return "", errors.Wrap(err, "failed while getting file")
+		return "", fmt.Errorf("failed getting file: %s", err.Error())
 	}
 	if resp.Body != nil {
 		defer resp.Body.Close()
