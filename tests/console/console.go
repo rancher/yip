@@ -5,8 +5,8 @@ import (
 	"io"
 	"os/exec"
 
-	"github.com/apex/log"
 	"github.com/hashicorp/go-multierror"
+	"github.com/sirupsen/logrus"
 )
 
 var Commands []string
@@ -52,8 +52,8 @@ func (s TestConsole) RunTemplate(st []string, template string) error {
 	for _, svc := range st {
 		out, err := s.Run(fmt.Sprintf(template, svc))
 		if err != nil {
-			log.Error(out)
-			log.Error(err.Error())
+			logrus.Error(out)
+			logrus.Error(err.Error())
 			errs = multierror.Append(errs, err)
 			continue
 		}
