@@ -16,7 +16,6 @@ package plugins_test
 
 import (
 	"io"
-	"io/ioutil"
 
 	"github.com/sirupsen/logrus"
 	"github.com/twpayne/go-vfs/v4/vfst"
@@ -48,7 +47,7 @@ var _ = Describe("Sysctl", func() {
 			file, err := fs.Open("/proc/sys/debug/exception-trace")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			Expect(err).ShouldNot(HaveOccurred())
 			Expect(string(b)).Should(Equal("0"))
 		})

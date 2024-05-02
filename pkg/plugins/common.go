@@ -4,7 +4,7 @@ import (
 	"crypto/tls"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"os/exec"
 	"strings"
@@ -73,7 +73,7 @@ func download(url string) (string, error) {
 	if resp.StatusCode/100 > 2 {
 		return "", fmt.Errorf("%s %s", resp.Proto, resp.Status)
 	}
-	bytes, err := ioutil.ReadAll(resp.Body)
+	bytes, err := io.ReadAll(resp.Body)
 	return string(bytes), err
 }
 
