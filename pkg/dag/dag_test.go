@@ -221,36 +221,6 @@ var _ = Describe("dag", func() {
 		})
 	})
 
-	Context("Conditionals options", func() {
-
-		It("Adds the option only if the condition passes", func() {
-			g = DAG(EnableInit)
-			Expect(g).ToNot(BeNil())
-
-			g.Add("baz",
-				ConditionalOption(func() bool { return true }, FatalOp),
-				WithCallback(func(ctx context.Context) error {
-					return fmt.Errorf("failure")
-				}))
-
-			err := g.Run(context.Background())
-			Expect(err).To(HaveOccurred())
-
-			g = DAG(EnableInit)
-			Expect(g).ToNot(BeNil())
-
-			g.Add("baz",
-				ConditionalOption(func() bool { return false }, FatalOp),
-				WithCallback(func(ctx context.Context) error {
-					return fmt.Errorf("failure")
-				}))
-
-			err = g.Run(context.Background())
-			Expect(err).ToNot(HaveOccurred())
-		})
-
-	})
-
 	Context("Multiple callbacks", func() {
 		It("fails if one of them fail", func() {
 			f := ""
@@ -317,11 +287,7 @@ var _ = Describe("dag", func() {
 					mu.Unlock()
 					return nil
 				},
-			), WithDeps("bar"))
-			g.Add("bar", EnableIf(func() bool { return false }), WithCallback(func(ctx context.Context) error {
-				f += "bar"
-				return nil
-			}))
+			))
 			g.Run(context.Background())
 			Expect(f).To(Or(Equal("foona"), Equal("nafoo")))
 		})

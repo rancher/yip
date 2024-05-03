@@ -295,38 +295,6 @@ func WithDeps(deps ...string) OpOption {
 	}
 }
 
-// ConditionalOption defines an option that is enabled only if the
-// conditional callback returns true.
-func ConditionalOption(condition func() bool, op OpOption) OpOption {
-	if condition() {
-		return op
-	}
-
-	return NoOp
-}
-
-// IfElse defines options that are enabled if the condition passess or not
-// It is just syntax sugar.
-func IfElse(condition bool, op, noOp OpOption) OpOption {
-	if condition {
-		return op
-	}
-
-	return noOp
-}
-
-// EnableIf defines an operation dependency.
-// Dependencies can be expressed as a string.
-// Note: before running the DAG you must define all the operations.
-func EnableIf(conditional func() bool) OpOption {
-	return func(key string, os *OpState, g *Graph) error {
-		if !conditional() {
-			os.ignore = true
-		}
-		return nil
-	}
-}
-
 // WithCallback associates a callback to the operation to be executed
 // when the DAG is walked-by.
 func WithCallback(fn ...func(context.Context) error) OpOption {
