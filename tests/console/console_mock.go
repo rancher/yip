@@ -8,9 +8,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/apex/log"
 	"github.com/hashicorp/go-multierror"
 	. "github.com/onsi/gomega"
+	"github.com/sirupsen/logrus"
 )
 
 type CmdMock struct {
@@ -85,8 +85,8 @@ func (s TestConsoleMock) RunTemplate(st []string, template string) error {
 	for _, svc := range st {
 		out, err := s.Run(fmt.Sprintf(template, svc))
 		if err != nil {
-			log.Error(out)
-			log.Error(err.Error())
+			logrus.Error(out)
+			logrus.Error(err.Error())
 			errs = multierror.Append(errs, err)
 			continue
 		}

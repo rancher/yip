@@ -1,10 +1,10 @@
 package plugins
 
 import (
+	"errors"
 	"fmt"
 	"regexp"
 
-	"github.com/pkg/errors"
 	"github.com/twpayne/go-vfs/v4"
 
 	"github.com/rancher/yip/pkg/logger"
@@ -18,7 +18,7 @@ func NodeConditional(l logger.Interface, s schema.Stage, fs vfs.FS, console Cons
 			return fmt.Errorf("Skipping stage (node hostname '%s' doesn't match '%s')", system.Node.Hostname, s.Node)
 		}
 		if err != nil {
-			return errors.Wrapf(err, "Skipping invalid regex for node hostname '%s', error: %s", s.Node, err.Error())
+			return errors.Join(err, fmt.Errorf("Skipping invalid regex for node hostname '%s'", s.Node))
 		}
 	}
 	return nil

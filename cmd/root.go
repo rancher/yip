@@ -16,7 +16,7 @@ package cmd
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"os"
 	"strings"
 
@@ -87,7 +87,7 @@ For example:
 		}
 
 		if fromStdin {
-			std, err := ioutil.ReadAll(os.Stdin)
+			std, err := io.ReadAll(os.Stdin)
 			if err != nil {
 				return err
 			}

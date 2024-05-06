@@ -15,7 +15,7 @@
 package plugins_test
 
 import (
-	"io/ioutil"
+	"io"
 	"log"
 	"os"
 
@@ -44,7 +44,7 @@ var _ = Describe("Files", func() {
 			}, fs, testConsole)
 			Expect(err).ShouldNot(HaveOccurred())
 			file, err := fs.Open("/tmp/test/foo")
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -65,7 +65,7 @@ var _ = Describe("Files", func() {
 			file, err := fs.Open("/testarea/dir/subdir/foo")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}

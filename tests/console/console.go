@@ -2,11 +2,11 @@ package consoletests
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"os/exec"
 
-	"github.com/apex/log"
 	"github.com/hashicorp/go-multierror"
+	"github.com/sirupsen/logrus"
 )
 
 var Commands []string
@@ -23,7 +23,7 @@ func (s TestConsole) Run(cmd string, opts ...func(*exec.Cmd)) (string, error) {
 	Commands = append(Commands, cmd)
 	Commands = append(Commands, c.Args...)
 	if c.Stdin != nil {
-		b, _ := ioutil.ReadAll(c.Stdin)
+		b, _ := io.ReadAll(c.Stdin)
 		Stdin = string(b)
 	}
 
@@ -40,7 +40,7 @@ func (s TestConsole) Start(cmd *exec.Cmd, opts ...func(*exec.Cmd)) error {
 	}
 	Commands = append(Commands, cmd.Args...)
 	if cmd.Stdin != nil {
-		b, _ := ioutil.ReadAll(cmd.Stdin)
+		b, _ := io.ReadAll(cmd.Stdin)
 		Stdin = string(b)
 	}
 	return nil
@@ -52,8 +52,8 @@ func (s TestConsole) RunTemplate(st []string, template string) error {
 	for _, svc := range st {
 		out, err := s.Run(fmt.Sprintf(template, svc))
 		if err != nil {
-			log.Error(out)
-			log.Error(err.Error())
+			logrus.Error(out)
+			logrus.Error(err.Error())
 			errs = multierror.Append(errs, err)
 			continue
 		}

@@ -16,7 +16,6 @@ package plugins_test
 
 import (
 	"io"
-	"io/ioutil"
 	"log"
 	"os"
 
@@ -68,7 +67,7 @@ var _ = Describe("Git", func() {
 			file, err := fs.Open("/testarea/foo/unittest.txt")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -91,7 +90,7 @@ var _ = Describe("Git", func() {
 			file, err := fs.Open("/testarea/unittest.txt")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -115,7 +114,7 @@ var _ = Describe("Git", func() {
 			file, err := fs.Open("/testarea/unittest.txt")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -134,7 +133,7 @@ var _ = Describe("Git", func() {
 			file, err = fs.Open("/testarea/unittest.txt")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err = ioutil.ReadAll(file)
+			b, err = io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -162,7 +161,7 @@ var _ = Describe("Git", func() {
 			file, err := fs.Open("/testarea/test.txt")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -182,7 +181,7 @@ var _ = Describe("Git", func() {
 			file, err = fs.Open("/testarea/test.txt")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err = ioutil.ReadAll(file)
+			b, err = io.ReadAll(file)
 			if err != nil {
 				log.Fatal(err)
 			}
