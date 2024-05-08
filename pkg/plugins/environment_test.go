@@ -16,7 +16,6 @@ package plugins_test
 
 import (
 	"io"
-	"io/ioutil"
 	"os"
 
 	"github.com/sirupsen/logrus"
@@ -48,7 +47,7 @@ var _ = Describe("Environment", func() {
 			file, err := fs.Open("/etc/environment")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			Expect(err).ShouldNot(HaveOccurred())
 			Expect(string(b)).Should(Equal("foo=0\n"))
 		})
@@ -72,7 +71,7 @@ var _ = Describe("Environment", func() {
 			file, err := fs.Open("/run/cos/cos-layout.env")
 			Expect(err).ShouldNot(HaveOccurred())
 
-			b, err := ioutil.ReadAll(file)
+			b, err := io.ReadAll(file)
 			Expect(err).ShouldNot(HaveOccurred())
 			Expect(string(b)).Should(Equal("foo=0\n"))
 		})
