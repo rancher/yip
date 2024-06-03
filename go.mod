@@ -1,6 +1,7 @@
 module github.com/rancher/yip
 
 go 1.21
+toolchain go1.22.3
 
 require (
 	github.com/Masterminds/sprig/v3 v3.2.3
@@ -22,7 +23,7 @@ require (
 	github.com/spf13/cobra v1.8.0
 	github.com/twpayne/go-vfs/v4 v4.3.0
 	github.com/willdonnelly/passwd v0.0.0-20141013001024-7935dab3074c
-	github.com/zcalusic/sysinfo v1.0.2
+	github.com/zcalusic/sysinfo v1.1.0
 	golang.org/x/crypto v0.23.0
 	gopkg.in/ini.v1 v1.67.0
 	gopkg.in/yaml.v3 v3.0.1
