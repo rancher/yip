@@ -12,8 +12,8 @@ require (
 	github.com/itchyny/gojq v0.12.15
 	github.com/joho/godotenv v1.5.1
 	github.com/kendru/darwin/go/depgraph v0.0.0-20221105232959-877d6a81060c
-	github.com/mauromorales/xpasswd v0.3.0
-	github.com/mudler/entities v0.0.0-20240606103849-caa372976495
+	github.com/mauromorales/xpasswd v0.3.1
+	github.com/mudler/entities v0.0.0-20240611135956-f8f11ba52c2f
 	github.com/onsi/ginkgo/v2 v2.19.0
 	github.com/onsi/gomega v1.33.1
 	github.com/rancher-sandbox/linuxkit v1.0.2
@@ -43,6 +43,7 @@ require (
 	github.com/go-git/go-billy/v5 v5.5.0 // indirect
 	github.com/go-logr/logr v1.4.2 // indirect
 	github.com/go-task/slim-sprig/v3 v3.0.0 // indirect
+	github.com/gofrs/flock v0.8.1 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/google/go-cmp v0.6.0 // indirect
 	github.com/google/pprof v0.0.0-20240424215950-a892ee059fd6 // indirect
