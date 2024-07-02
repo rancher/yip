@@ -432,17 +432,6 @@ stages:
                   homedir: "/home/foo"
                   shell: "/bin/bash"
 ```
-### `stages.<stageID>.[<stepN>].modules`
-
-A list of kernel modules to load.
-
-```yaml
-stages:
-   default:
-     - name: "Setup users"
-       modules:
-       - nvidia
-```
 ### `stages.<stageID>.[<stepN>].systemctl`
 
 A list of systemd services to `enable`, `disable`, `mask` or `start`.
