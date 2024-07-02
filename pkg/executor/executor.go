@@ -84,7 +84,6 @@ func NewExecutor(opts ...Options) Executor {
 			plugins.Sysctl,
 			plugins.User,
 			plugins.SSH,
-			plugins.LoadModules,
 			plugins.Timesyncd,
 			plugins.Systemctl,
 			plugins.Environment,

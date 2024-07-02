@@ -26,7 +26,6 @@ require (
 	golang.org/x/crypto v0.23.0
 	gopkg.in/ini.v1 v1.67.0
 	gopkg.in/yaml.v3 v3.0.1
-	pault.ag/go/modprobe v0.1.2
 )
 
 require (
@@ -81,5 +80,4 @@ require (
 	gopkg.in/djherbis/times.v1 v1.3.0 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
-	pault.ag/go/topsort v0.1.1 // indirect
 )
