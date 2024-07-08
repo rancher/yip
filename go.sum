@@ -99,6 +99,8 @@ github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 h1:BQSFePA1RWJOl
 github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99/go.mod h1:1lJo3i6rXxKeerYnT8Nvf0QmHCRC1n8sfWVwXF2Frvo=
 github.com/joho/godotenv v1.5.1 h1:7eLL/+HRGLY0ldzfGMeQkb7vMd0as4CfYvUVzLqw0N0=
 github.com/joho/godotenv v1.5.1/go.mod h1:f4LDr5Voq0i2e/R5DDNOoa2zzDfwtkZa6DnEwAbqwq4=
+github.com/kairos-io/osutil v1.5.0 h1:U7YyKWCzG5LJLyarGOJ4QgTS+ymS8sF3DB+z3llpK+k=
+github.com/kairos-io/osutil v1.5.0/go.mod h1:TEzphzUUunysbdDRfdOgqkg10POQbnfIPV50ynqOfIg=
 github.com/kendru/darwin/go/depgraph v0.0.0-20221105232959-877d6a81060c h1:eKb4PqwAMhlqwXw0W3atpKaYaPGlXE/Fwh+xpCEYaPk=
 github.com/kendru/darwin/go/depgraph v0.0.0-20221105232959-877d6a81060c/go.mod h1:VOfm8h1NySetVlpHDSnbpCMsvCgYaU+YDn4XezUy2+4=
 github.com/kevinburke/ssh_config v1.2.0 h1:x584FjTGwHzMwvHx18PXxbBVzfnxogHaAReU4gf13a4=
@@ -181,8 +183,6 @@ github.com/stretchr/testify v1.8.0/go.mod h1:yNjHg4UonilssWZ8iaSj1OCr/vHnekPRkoO
 github.com/stretchr/testify v1.8.2/go.mod h1:w2LPCIKwWwSfY2zedu0+kehJoqGctiVI29o6fzry7u4=
 github.com/stretchr/testify v1.9.0 h1:HtqpIVDClZ4nwg75+f6Lvsy/wHu+3BoSGCbBAcpTsTg=
 github.com/stretchr/testify v1.9.0/go.mod h1:r2ic/lqez/lEtzL7wO/rwa5dbSLXVDPFyf8C91i36aY=
-github.com/tredoe/osutil v1.5.0 h1:UGVxbbHRoZi8xXVmbNZ2vgG6XoJ15ndE4LniiQ3rJKg=
-github.com/tredoe/osutil v1.5.0/go.mod h1:TEzphzUUunysbdDRfdOgqkg10POQbnfIPV50ynqOfIg=
 github.com/twpayne/go-vfs/v4 v4.3.0 h1:rTqFzzOQ/6ESKTSiwVubHlCBedJDOhQyVSnw8rQNZhU=
 github.com/twpayne/go-vfs/v4 v4.3.0/go.mod h1:tq2UVhnUepesc0lSnPJH/jQ8HruGhzwZe2r5kDFpEIw=
 github.com/ulikunitz/xz v0.5.12 h1:37Nm15o69RwBkXM0J6A5OlE67RZTfzUxTj8fB3dfcsc=
