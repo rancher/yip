@@ -17,7 +17,6 @@ require (
 	github.com/onsi/ginkgo/v2 v2.20.1
 	github.com/onsi/gomega v1.34.2
 	github.com/rancher-sandbox/linuxkit v1.0.2
-	github.com/sanity-io/litter v1.5.5
 	github.com/satori/go.uuid v1.2.0
 	github.com/sirupsen/logrus v1.9.4-0.20230606125235-dd1b4c2e81af
 	github.com/spf13/cobra v1.8.0

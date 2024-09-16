@@ -22,7 +22,6 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/sanity-io/litter"
 	"github.com/sirupsen/logrus"
 	"github.com/twpayne/go-vfs/v4"
 	"github.com/twpayne/go-vfs/v4/vfst"
@@ -747,8 +746,7 @@ stages:
 			Expect(buf.String()).To(ContainSubstring(fmt.Sprintf("Reading '%s'", filepath.Join(temp, "03_test.yaml"))), buf.String())
 			// 3 commands + init in the graph
 			g, _ := def.Graph("default", vfs.OSFS, testConsole, temp)
-			Expect(len(g)).To(Equal(4), litter.Sdump(g))
-
+			Expect(len(g)).To(Equal(4))
 		})
 	})
 })
