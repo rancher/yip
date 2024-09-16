@@ -19,7 +19,7 @@ require (
 	github.com/rancher-sandbox/linuxkit v1.0.2
 	github.com/sanity-io/litter v1.5.5
 	github.com/satori/go.uuid v1.2.0
-	github.com/sirupsen/logrus v1.9.3
+	github.com/sirupsen/logrus v1.9.4-0.20230606125235-dd1b4c2e81af
 	github.com/spf13/cobra v1.8.0
 	github.com/twpayne/go-vfs/v4 v4.3.0
 	github.com/zcalusic/sysinfo v1.1.0
@@ -28,7 +28,8 @@ require (
 )
 
 require (
-	github.com/diskfs/go-diskfs v1.4.0 // indirect
+	github.com/diskfs/go-diskfs v1.4.1 // indirect
+	github.com/djherbis/times v1.6.0 // indirect
 	github.com/elliotwutingfeng/asciiset v0.0.0-20230602022725-51bbb787efab // indirect
 	github.com/go-logr/logr v1.4.2 // indirect
 	github.com/go-task/slim-sprig/v3 v3.0.0 // indirect
@@ -39,6 +40,7 @@ require (
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/itchyny/timefmt-go v0.1.6 // indirect
+	github.com/klauspost/compress v1.17.4 // indirect
 	github.com/kr/pretty v0.3.1 // indirect
 	github.com/packethost/packngo v0.31.0 // indirect
 	github.com/phayes/permbits v0.0.0-20190612203442-39d7c581d2ee // indirect
@@ -58,7 +60,6 @@ require (
 	golang.org/x/text v0.18.0 // indirect
 	golang.org/x/tools v0.21.1-0.20240508182429-e35e4ccd0d2d // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
-	gopkg.in/djherbis/times.v1 v1.3.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
 
