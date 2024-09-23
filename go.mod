@@ -12,7 +12,7 @@ require (
 	github.com/joho/godotenv v1.5.1
 	github.com/kendru/darwin/go/depgraph v0.0.0-20221105232959-877d6a81060c
 	github.com/mauromorales/xpasswd v0.4.0
-	github.com/mudler/entities v0.8.0
+	github.com/mudler/entities v0.8.1
 	github.com/onsi/ginkgo/v2 v2.20.1
 	github.com/onsi/gomega v1.34.2
 	github.com/rancher-sandbox/linuxkit v1.0.2
