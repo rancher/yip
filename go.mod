@@ -18,7 +18,7 @@ require (
 	github.com/rancher-sandbox/linuxkit v1.0.2
 	github.com/satori/go.uuid v1.2.0
 	github.com/sirupsen/logrus v1.9.4-0.20230606125235-dd1b4c2e81af
-	github.com/spf13/cobra v1.8.0
+	github.com/spf13/cobra v1.8.1
 	github.com/twpayne/go-vfs/v4 v4.3.0
 	github.com/zcalusic/sysinfo v1.1.0
 	gopkg.in/ini.v1 v1.67.0
