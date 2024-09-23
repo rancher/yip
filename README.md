@@ -86,36 +86,7 @@ stages:
 
 Yip uses a simple, yet powerful distro-agnostic cloud-init style format for the definition.
 
-```bash
-$> yip -s test yip1.yaml yip2.yaml
-$> yip -s test https://..
-```
----
-
-That's it! by default `yip` uses the default stage and the `default` executor, but you can customize its execution.
-
-
-```
-yip loads cloud-init style yamls and applies them in the system.
-
-For example:
-
-        $> yip -s initramfs https://<yip.yaml> /path/to/disk <definition.yaml> ...
-        $> yip -s initramfs <yip.yaml> <yip2.yaml> ...
-        $> cat def.yaml | yip -
-
-Usage:
-  yip [flags]
-
-Flags:
-  -e, --executor string   Executor which applies the config (default "default")
-  -h, --help              help for yip
-  -s, --stage string      Stage to apply (default "default")
-```
-
-
 ## How it works
-
 
 Yip works in *stages*. You can define *stages* that you can decide to run and apply in various ways and in a different enviroment (that's why *stages*).  
 
@@ -138,21 +109,7 @@ stages:
 
 writes a `/tmp/bar` file during the `default` stage and will also run it afterwards. 
 
-Now we can execute it:
-
-```bash
-$> cat myfile.yaml | yip -s default -
-```
-
-As `yip` by default runs the `default` stage we could have just run:
-
-```bash
-$> cat myfile.yaml | yip -
-```
-
-A yaml file can define multiple stages, which can be run from the `cli` with `-s`. Each stage is defined under `stages`, and in each stage are defined a list of `steps` to execute.
-
-`Yip` will execute the steps and report failures. It will exit non-zero if one of the steps failed executing. It will, however, keep running all the detected `yipfiles` and stages.
+A yaml file can define multiple stages and in each stage are defined a list of `steps` to execute.
 
 ## Compatibility with Cloud Init format
 
