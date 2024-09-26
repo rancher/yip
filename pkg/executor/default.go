@@ -189,9 +189,10 @@ func (e *DefaultExecutor) dirOps(stage, dir string, fs vfs.FS, console plugins.C
 
 			config, err := schema.Load(path, fs, schema.FromFile, e.modifier)
 			if err != nil {
-				return err
-
+				e.logger.Warnf("failed to load file '%s': %s", path, err.Error())
+				return nil
 			}
+
 			ops := e.genOpFromSchema(path, stage, *config, fs, console)
 			// mark lexicographic order dependency from previous blocks
 			if len(prev) > 0 && len(ops) > 0 {
