@@ -487,25 +487,25 @@ stages:
 stages:
   initramfs:
     - users:
-        kairos:
+        user1:
           groups:
             - sudo
-          passwd: kairos
+          passwd: hunter2
     - users:
-        kairos:
+        user1:
           groups:
             - sudo
-          passwd: kairos
+          passwd: hunter2
     - users:
-        kairos:
+        user1:
           groups:
             - sudo
-          passwd: kairos
+          passwd: hunter2
     - users:
-        kairos:
+        user1:
           groups:
             - sudo
-          passwd: kairos
+          passwd: hunter2
 `,
 			})
 			Expect(err).Should(BeNil())
@@ -531,28 +531,28 @@ stages:
 				"/some/yip/01_first.yaml": `
 stages:
   initramfs:
-    - name: Create Kairos User
+    - name: Create User
       users:
-        kairos:
+        user1:
           groups:
             - sudo
-          passwd: kairos
+          passwd: hunter2
     - users:
-        kairos:
+        user1:
           groups:
             - sudo
-          passwd: kairos
-    - name: Create Kairos User
+          passwd: hunter2
+    - name: Create User
       users:
-        kairos:
+        user1:
           groups:
             - sudo
-          passwd: kairos
+          passwd: hunter2
     - users:
-        kairos:
+        user1:
           groups:
             - sudo
-          passwd: kairos
+          passwd: hunter2
 `,
 			})
 			Expect(err).Should(BeNil())
@@ -747,6 +747,47 @@ stages:
 			// 3 commands + init in the graph
 			g, _ := def.Graph("default", vfs.OSFS, testConsole, temp)
 			Expect(len(g)).To(Equal(4))
+		})
+		It("loads a graph with malformed yaml files", func() {
+			def := NewExecutor()
+			testConsole := console.NewStandardConsole()
+
+			fs, cleanup, err := vfst.NewTestFS(map[string]interface{}{
+				"/some/yip/01_first.yaml": `
+name: "Rootfs Layout Settings"
+stages:
+    rootfs.before:
+    - name: "before roots"
+      commands:
+      - echo "rootfs.before"
+    rootfs:
+    - name: "rootfs"
+      commands:
+      - echo "rootfs"
+    - name: "rootfs 2"
+      commands:
+      - echo "2"
+    initramfs:
+    - name: "initramfs"
+      commands:
+      - echo "initramfs"
+`,
+				"/some/yip/02_malformed.yaml": `
+name: "second Rootfs Layout Settings"
+stages:
+    rootfs.before:
+   # bad indentation
+   - name: "second before roots"
+      commands:
+      - echo "second.rootfs.before"
+`,
+			})
+			Expect(err).Should(BeNil())
+			defer cleanup()
+
+			g, err := def.Graph("rootfs", fs, testConsole, "/some/yip")
+			Expect(err).ShouldNot(HaveOccurred())
+			Expect(len(g)).To(Equal(3))
 		})
 	})
 })
