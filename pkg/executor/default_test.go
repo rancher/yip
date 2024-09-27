@@ -786,7 +786,7 @@ stages:
 			defer cleanup()
 
 			g, err := def.Graph("rootfs", fs, testConsole, "/some/yip")
-			Expect(err).ShouldNot(HaveOccurred())
+			Expect(err).Should(HaveOccurred())
 			Expect(len(g)).To(Equal(3))
 		})
 	})
