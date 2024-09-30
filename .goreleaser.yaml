@@ -2,6 +2,8 @@ before:
   hooks:
     - go mod tidy
 dist: release
+builds:
+  - skip: true
 source:
   enabled: true
   name_template: '{{ .ProjectName }}-{{ .Tag }}-source'
