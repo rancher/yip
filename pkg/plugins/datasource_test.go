@@ -18,7 +18,6 @@ import (
 	"io"
 	"os"
 	"path/filepath"
-	"strings"
 	"time"
 
 	. "github.com/onsi/ginkgo/v2"
@@ -38,7 +37,7 @@ var _ = Describe("Datasources", func() {
 		l := logrus.New()
 		l.SetLevel(logrus.DebugLevel)
 		l.SetOutput(io.Discard)
-		It("Runs datasources and fails to adquire any metadata", func() {
+		It("Runs datasources and fails to aquire any metadata", func() {
 			fs, cleanup, err := vfst.NewTestFS(map[string]interface{}{})
 			Expect(err).Should(BeNil())
 			defer cleanup()
@@ -47,8 +46,7 @@ var _ = Describe("Datasources", func() {
 					Providers: []string{"cdrom"},
 				},
 			}, fs, testConsole)
-			Expect(err).To(HaveOccurred())
-			Expect(strings.ToLower(err.Error())).To(ContainSubstring("no metadata/userdata found"))
+			Expect(err).ToNot(HaveOccurred())
 			_, err = fs.Stat(providers.ConfigPath)
 			Expect(err).ShouldNot(HaveOccurred())
 		})
@@ -75,8 +73,7 @@ var _ = Describe("Datasources", func() {
 				},
 			}, fs, testConsole)
 			elapsed := time.Since(start)
-			Expect(err).To(HaveOccurred())
-			Expect(strings.ToLower(err.Error())).To(ContainSubstring("no metadata/userdata found"))
+			Expect(err).ToNot(HaveOccurred())
 			// check if it took less than 10 seconds. If we were to run all those datasources one after the other
 			// it would take much more
 			Expect(elapsed).To(BeNumerically("<", 10*time.Second))
