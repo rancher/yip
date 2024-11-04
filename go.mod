@@ -15,7 +15,7 @@ require (
 	github.com/mauromorales/xpasswd v0.4.0
 	github.com/mudler/entities v0.8.1
 	github.com/onsi/ginkgo/v2 v2.20.2
-	github.com/onsi/gomega v1.34.2
+	github.com/onsi/gomega v1.35.1
 	github.com/rancher-sandbox/linuxkit v1.0.2
 	github.com/satori/go.uuid v1.2.0
 	github.com/sirupsen/logrus v1.9.4-0.20230606125235-dd1b4c2e81af
@@ -50,9 +50,9 @@ require (
 	github.com/vishvananda/netlink v1.3.0 // indirect
 	github.com/vishvananda/netns v0.0.4 // indirect
 	github.com/vmware/vmw-guestinfo v0.0.0-20220317130741-510905f0efa3 // indirect
-	golang.org/x/net v0.29.0 // indirect
-	golang.org/x/sys v0.25.0 // indirect
-	golang.org/x/text v0.18.0 // indirect
+	golang.org/x/net v0.30.0 // indirect
+	golang.org/x/sys v0.26.0 // indirect
+	golang.org/x/text v0.19.0 // indirect
 	golang.org/x/tools v0.25.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
