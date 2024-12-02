@@ -9,7 +9,7 @@ require (
 	github.com/denisbrodbeck/machineid v1.0.1
 	github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510
 	github.com/hashicorp/go-multierror v1.1.1
-	github.com/itchyny/gojq v0.12.16
+	github.com/itchyny/gojq v0.12.17
 	github.com/joho/godotenv v1.5.1
 	github.com/kendru/darwin/go/depgraph v0.0.0-20221105232959-877d6a81060c
 	github.com/mauromorales/xpasswd v0.4.0
