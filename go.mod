@@ -15,7 +15,7 @@ require (
 	github.com/mauromorales/xpasswd v0.4.0
 	github.com/mudler/entities v0.8.1
 	github.com/onsi/ginkgo/v2 v2.22.0
-	github.com/onsi/gomega v1.36.0
+	github.com/onsi/gomega v1.36.1
 	github.com/rancher-sandbox/linuxkit v1.0.2
 	github.com/satori/go.uuid v1.2.0
 	github.com/sirupsen/logrus v1.9.4-0.20230606125235-dd1b4c2e81af
