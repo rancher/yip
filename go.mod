@@ -1,8 +1,7 @@
 module github.com/rancher/yip
 
 go 1.22.0
-
-toolchain go1.22.7
+toolchain go1.23.6
 
 require (
 	github.com/cavaliergopher/grab/v3 v3.0.1
@@ -12,7 +11,7 @@ require (
 	github.com/itchyny/gojq v0.12.17
 	github.com/joho/godotenv v1.5.1
 	github.com/kendru/darwin/go/depgraph v0.0.0-20221105232959-877d6a81060c
-	github.com/mauromorales/xpasswd v0.4.0
+	github.com/mauromorales/xpasswd v0.4.1
 	github.com/mudler/entities v0.8.1
 	github.com/onsi/ginkgo/v2 v2.22.2
 	github.com/onsi/gomega v1.36.2
